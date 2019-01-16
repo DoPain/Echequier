@@ -22,28 +22,28 @@ Joueur::~Joueur()
 
 JoueurBlanc::JoueurBlanc() : Joueur(true)
 {
-  m_pieces.push_back(std::shared_ptr<Piece>((new Roi( true )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Reine( true )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Fou( true, true )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Fou( true, false )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Cavalier( true, true )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Cavalier( true, false )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Tour( true, true )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Tour( true, false )) ));
+  m_pieces.push_back(std::shared_ptr<Piece>(new Roi( true )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Reine( true )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Fou( true, true )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Fou( true, false )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Cavalier( true, true )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Cavalier( true, false )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Tour( true, true )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Tour( true, false )) );
   for (int x = 1; x <= 8; x++)
-    m_pieces.push_back(std::shared_ptr<Piece>((new Pion( true, x )) ));
+    m_pieces.push_back(std::shared_ptr<Piece>(new Pion( true, x )) );
 }
 
 JoueurNoir::JoueurNoir() : Joueur(false)
 {
-  m_pieces.push_back(std::shared_ptr<Piece>((new Roi( false )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Reine( false )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Fou( false, true )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Fou( false, false )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Cavalier( false, true )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Cavalier( false, false )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Tour( false, true )) ));
-  m_pieces.push_back(std::shared_ptr<Piece>((new Tour( false, false )) ));
+  m_pieces.push_back(std::shared_ptr<Piece>(new Roi( false )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Reine( false )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Fou( false, true )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Fou( false, false )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Cavalier( false, true )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Cavalier( false, false )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Tour( false, true )) );
+  m_pieces.push_back(std::shared_ptr<Piece>(new Tour( false, false )) );
   for (int x = 1; x <= 8; x++)
     m_pieces.push_back(std::shared_ptr<Piece>((new Pion( false, x )) ));
 }
