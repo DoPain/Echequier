@@ -1,4 +1,9 @@
 #include "joueur.h"
+#include "Roi.h"
+#include "Reine.h"
+#include "Fou.h"
+#include "Cavalier.h"
+#include "Tour.h"
 
 Joueur::Joueur( bool white )
 {
